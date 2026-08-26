@@ -1,0 +1,11 @@
+Put your VRM model file here, named exactly:
+
+    sanju.vrm
+
+web/app.js loads it via a relative path ('../models/sanju.vrm'), so the
+filename and location both matter — it must be at:
+
+    project/models/sanju.vrm
+
+Delete this .txt file once sanju.vrm is in place (it's just a placeholder
+so this folder exists in the delivered project).
