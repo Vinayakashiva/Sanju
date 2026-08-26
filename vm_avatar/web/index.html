@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sanju VRM Avatar</title>
+<link rel="stylesheet" href="./style.css">
+
+<!-- three.js / three-vrm are loaded from a CDN via this importmap. Loading
+     this page over file:// with a CDN importmap only works because
+     vrm_bridge.py enables LocalContentCanAccessRemoteUrls — see the
+     comment there if this ever needs revisiting. -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+    "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@2.1.1/lib/three-vrm.module.js"
+  }
+}
+</script>
+
+<!-- Built into Qt WebEngine itself (ships inside the PyQt6 package) — this
+     is NOT a network request and NOT a websocket to any external host.
+     It's what lets vrm_bridge.py's AssistantBridge and this page call
+     into each other directly, so none of the "websocket errors / localhost
+     connection failures / port conflicts" failure modes apply here. -->
+<script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+</head>
+<body>
+<canvas id="avatar-canvas"></canvas>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

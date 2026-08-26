@@ -1,0 +1,22 @@
+/* web/style.css
+ * Everything must stay transparent — this page renders inside a
+ * borderless overlay window (see vrm_bridge.py), not a browser tab, and
+ * any opaque background here would show up as a visible rectangle on the
+ * user's desktop.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
