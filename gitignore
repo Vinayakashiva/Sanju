@@ -1,0 +1,23 @@
+# Secrets — never commit this
+.env
+
+# Virtual environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm
+.idea/
+
+# Personal / runtime data — regenerated per-user, not project code
+ai_profile.json
+sanju_memory.json
+sanju_companion.json
+
+# OS junk
+.DS_Store
+Thumbs.db
